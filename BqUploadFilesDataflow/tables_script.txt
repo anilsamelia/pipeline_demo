@@ -1,0 +1,29 @@
+//staging Table
+CREATE TABLE `your_project_id.your_dataset_name.customer_table` (
+  `customer_Name` VARCHAR(255) NOT NULL,
+  `customer_id` VARCHAR(18),
+  `Customer_open_date` DATE NOT NULL,
+  `last_consulted_date` DATE,
+  `vaccination_type` CHAR(5),
+  `doctor_consulted` CHAR(255),
+  `state` CHAR(5),
+  `country` CHAR(5),
+  `post_code` INT64,
+  `date_of_birth` DATE,
+  `active_customer` CHAR(1)
+) OPTIONS(
+  description="customer data table",
+  expiration_timestamp=NULL
+);
+
+//Table_India
+
+CREATE VIEW IF NOT EXISTS `project_id.dataset_id.Table_India`
+AS
+SELECT
+  column1,
+  column2
+FROM
+  `your_project_id.your_dataset_name.customer_table`
+WHERE
+  country='India';
