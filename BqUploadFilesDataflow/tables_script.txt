@@ -21,8 +21,7 @@ CREATE TABLE `your_project_id.your_dataset_name.customer_table` (
 CREATE VIEW IF NOT EXISTS `project_id.dataset_id.Table_India`
 AS
 SELECT
-  column1,
-  column2
+ *
 FROM
   `your_project_id.your_dataset_name.customer_table`
 WHERE
